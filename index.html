@@ -46,14 +46,14 @@
     }
     .legend-container {
       position: absolute;
-      left: 20px;
+      right: 20px;
       bottom: 20px;
       background-color: white;
       padding: 10px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       z-index: 1000;
-      max-height: 300px;
+      max-height: 500px;
       overflow-y: auto;
     }
     #toggleLegend {
@@ -99,7 +99,7 @@
       const view = new MapView({
         container: "viewDiv",
         map: map,
-        center: [-89.4010, 43.0761],
+        center: [-89.397365, 43.074885], 
         zoom: 15
       });
       const locateBtn = new Locate({
@@ -107,7 +107,7 @@
       });
       view.ui.add(locateBtn, {
         position: "top-left",
-        index: 0
+        index: 1
       });
 
       // 添加搜索部件
@@ -120,7 +120,7 @@
       });
       view.ui.add(searchWidget, {
         position: "top-left",
-        index: 1
+        index: 0
       });
 
       function createPopupTemplate(layerName) {
